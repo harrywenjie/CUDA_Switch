@@ -1,1 +1,1 @@
-pyinstaller cuda_switcher.spec
+pyinstaller --onefile --noconsole cuda_switch.py
