@@ -24,6 +24,8 @@ def set_cuda_version(version):
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp',
+            r'C:\Program Files\NVIDIA\CUDNN\v8.x\bin',
+            r'C:\Program Files\NVIDIA\CUDNN\v9.1\bin'
         ]
     elif version == '12.5':
         cuda_path = os.environ.get('CUDA_PATH_V12_5')
@@ -31,9 +33,9 @@ def set_cuda_version(version):
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin',
-            r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp'
-            r'c:\program files\nvidia\cudnn\v8.x\bin'
-            r'c:\program files\nvidia\cudnn\v9.1\bin'
+            r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp',
+            r'C:\Program Files\NVIDIA\CUDNN\v8.x\bin',
+            r'C:\Program Files\NVIDIA\CUDNN\v9.1\bin'
         ]
     else:
         messagebox.showerror("Error", "Invalid CUDA version selected")
@@ -56,9 +58,9 @@ def set_cuda_version(version):
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin',
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp',
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin',
-                r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp'
-                r'c:\program files\nvidia\cudnn\v8.x\bin'
-                r'c:\program files\nvidia\cudnn\v9.1\bin'
+                r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp',
+                r'C:\Program Files\NVIDIA\CUDNN\v8.x\bin',
+                r'C:\Program Files\NVIDIA\CUDNN\v9.1\bin'
             ])]
             
             # Prepend the selected CUDA paths
