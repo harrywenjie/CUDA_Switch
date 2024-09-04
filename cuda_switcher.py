@@ -32,6 +32,8 @@ def set_cuda_version(version):
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp'
+            r'c:\program files\nvidia\cudnn\v8.x\bin'
+            r'c:\program files\nvidia\cudnn\v9.1\bin'
         ]
     else:
         messagebox.showerror("Error", "Invalid CUDA version selected")
@@ -46,7 +48,7 @@ def set_cuda_version(version):
             
             # Update PATH in the system environment
             reg_key = reg.OpenKey(reg.HKEY_LOCAL_MACHINE, r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment", 0, reg.KEY_READ | reg.KEY_WRITE)
-            path_value, reg_type = reg.QueryValueEx(reg_key, "Path")
+            path_value, reg_type = reg.QueryValueEx(reg_key, "NEW_CUDA_PATH")
             paths = path_value.split(';')
             
             # Remove existing CUDA paths regardless of their order and position
@@ -55,12 +57,14 @@ def set_cuda_version(version):
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp',
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin',
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp'
+                r'c:\program files\nvidia\cudnn\v8.x\bin'
+                r'c:\program files\nvidia\cudnn\v9.1\bin'
             ])]
             
             # Prepend the selected CUDA paths
             paths = cuda_bins + paths
             new_path_value = ';'.join(paths)
-            reg.SetValueEx(reg_key, "Path", 0, reg_type, new_path_value)
+            reg.SetValueEx(reg_key, "NEW_CUDA_PATH", 0, reg_type, new_path_value)
             reg.CloseKey(reg_key)
             
             # Update the environment variable in the current session
