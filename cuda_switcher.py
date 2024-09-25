@@ -90,13 +90,28 @@ def switch_to_12_6():
 root = tk.Tk()
 root.title("CUDA Version Switcher")
 
+# Set window size
+window_width = 400
+window_height = 200
+
+# Get screen dimensions
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+# Calculate x and y coordinates for the window to be centered
+center_x = int(screen_width / 2 - window_width / 2)
+center_y = int(screen_height / 2 - window_height / 2)
+
+# Set the geometry of the window with the calculated center position
+root.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
+
 cuda_version_label = tk.Label(root, text=f"Current CUDA Version: {get_current_cuda_version()}")
 cuda_version_label.pack(pady=10)
 
 button_11_8 = tk.Button(root, text="Switch to CUDA 11.8", command=switch_to_11_8)
 button_11_8.pack(pady=10)
 
-button_12_5 = tk.Button(root, text="Switch to CUDA 12.5", command=switch_to_12_6)
-button_12_5.pack(pady=10)
+button_12_6 = tk.Button(root, text="Switch to CUDA 12.6", command=switch_to_12_6)
+button_12_6.pack(pady=10)
 
 root.mainloop()
