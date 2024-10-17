@@ -24,7 +24,7 @@ def set_cuda_version(version):
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp',
-            r'C:\Program Files\NVIDIA\CUDNN\v9.4\bin',
+            r'C:\Program Files\NVIDIA\CUDNN\v9.5\bin',
             r'C:\Program Files\NVIDIA\CUDNN\v8.x\bin'            
         ]
     elif version == '12.6':
@@ -34,7 +34,7 @@ def set_cuda_version(version):
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin',
             r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp',
-            r'C:\Program Files\NVIDIA\CUDNN\v9.4\bin',
+            r'C:\Program Files\NVIDIA\CUDNN\v9.5\bin',
             r'C:\Program Files\NVIDIA\CUDNN\v8.x\bin'
         ]
     else:
@@ -59,7 +59,7 @@ def set_cuda_version(version):
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp',
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin',
                 r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp',
-                r'C:\Program Files\NVIDIA\CUDNN\v9.4\bin',
+                r'C:\Program Files\NVIDIA\CUDNN\v9.5\bin',
                 r'C:\Program Files\NVIDIA\CUDNN\v8.x\bin'
             ])]
             
